@@ -67,11 +67,28 @@
 // let obj = JSON.parse(json)
 // console.log(obj)
 
-var cat = {
-    name: 'Rattata',
-    type: 'Normal',
-    number: 19
+let kpopIdol = {
+    groupName: "Blackpink",
+    type: "girl group",
+    label: "YG Entertainment",
+    member: 4
 };
 
-var type = pokemon.type;
-console.log(type)
+// let label = kpopIdol["label"];
+// console.log(label)
+
+// let values = Object.values(kpopIdol)
+// console.log(values)
+
+// var keys = Object.keys(kpopIdol);
+// console.log(keys)
+
+Object.freeze(kpopIdol);
+
+console.log(Object.isFrozen(kpopIdol));
+
+let members = {vicalist: "Rose, Jennie", dancer: "Lisa", visual: "Jisoo"}
+let songs = {1: "How You Like That", 2: "Pretty Savage", 3: "Love sick Girls"}
+let blackPink = {...members, ...songs}
+
+console.log(blackPink)

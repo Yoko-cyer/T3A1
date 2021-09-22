@@ -3,7 +3,7 @@
 
 
 ## Question 1
-Provide an overview and description of a standard source control process for a large project
+### Provide an overview and description of a standard source control process for a large project
 
 *Provides an extensive overview and description of a standard source control process*
 
@@ -11,16 +11,19 @@ References:
 
 ---
 ## Question 2
-What are the most important aspects of quality software?
+### What are the most important aspects of quality software?
 
 *List discuss and demonstrate 6 software quality characteristics.*
+
+There are six important qualities when softwares is built. They are reliability, functionality, usability, maintainability, portability and efficiency. I will outline them in detail below. These qualities are defined in ISO/IEC 9126-1:2001. It is an international standard for software quality set by ISO. ISO/IEC 9126-1:2001 is now replaced by ISO/IEC 25010:2011 and withdrawn. 
+Developers must know which qualities are more important when creating softwares because some qualities are more important than the other depending on what softwares. In order to avoid spending too much time on the less important qualities and streamline your work, it is important to discern which qualities are prioritised over the others. 
 
 
 References:
 
 ---
 ## Question 3
-Outline a standard high level structure for a MERN stack application and explain the components
+### Outline a standard high level structure for a MERN stack application and explain the components
 
 *Shows almost flawless understanding of the high level structure of the app*
 
@@ -28,7 +31,7 @@ References:
 
 ---
 ## Question 4
-A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
+### A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 
 *Effectively describes a range of skills and knowledge required by IT workers to complete a quality web development project*
 
@@ -36,7 +39,7 @@ References:
 
 -----------
 ## Question 5
-With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges
+### With reference to one of your own projects, discuss what knowledge or skills were required to complete your project, and to overcome challenges
 
 *Effectively describes a range of skills and knowledge used to complete a project.*
 
@@ -44,7 +47,7 @@ References:
 
 ---------------
 ## Question 6
-With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature
+### With reference to one of your own projects, evaluate how effective your knowledge and skills were for this project, and suggest changes or improvements for future projects of a similar nature
 
 *Evaluates effectiveness of knowledge and skills accurately, providing examples, and providing an insightful improvement on each skill*
 
@@ -487,9 +490,8 @@ https://www.freecodecamp.org/news/manipulating-arrays-in-javascript/
  
 ---
 ## Question 11
-Explain how objects can be manipulated in JavaScript, using examples from the JavaScript programming language
+### Explain how objects can be manipulated in JavaScript, using examples from the JavaScript programming language
 
-*Demonstrates an extensive ability to manipulate objects*
 
 ```js
 // an example of Basic object
@@ -498,11 +500,100 @@ let a = {
 }
 ```
 
-- Accessing object properties
-  - Dot notation
+- **Accessing object properties**
+It is pssible to access and manipulate object properties with dot and bracket notation like examples below.  
+
   ```js
+  let kpopIdol = {
+    groupName: "Blackpink",
+    type: "girl group",
+    label: "YG Entertainment",
+    member: 4
+  };
+
+  // Dot notation
+  let type = kpopIdol.type;
+  console.log(type)
+  // girl group
+  
+  // Bracket notation
+  let label = kpopIdol["label"];
+  console.log(label)
+  // YG Entertainment
   ```
-  - Bracket notation
+- **Object methods**
+
+  - Object.values()
+  This method returns an array of an object's own property values.
+
+  ```js 
+  let kpopIdol = {
+    groupName: "Blackpink",
+    type: "girl group",
+    label: "YG Entertainment",
+    member: 4
+  };
+
+  let keys = Object.values(kpopIdol)
+  console.log(keys)
+  // [ 'Blackpink', 'girl group', 'YG Entertainment', 4 ]
+  ```
+
+  - Object.keys()
+  This method returns an array of an object's own property names.
+
+  ```js
+  // it uses kpoIdol variable used above 
+  var keys = Object.keys(kpopIdol);
+  console.log(keys)
+  // [ 'groupName', 'type', 'label', 'member' ] 
+  ``` 
+
+  - Object.freeze()
+  This method prevents properties from being modified such as added, removed and changed unless it’s an object.  
+
+  ```js
+  // it uses kpoIdol variable used above 
+  Object.freeze(kpopIdol);
+  // Object.isFrozen() checks if an object is frozen 
+  console.log(Object.isFrozen(kpopIdol));
+  // returns true as a result
+  ```
+
+  - Object.seal()
+  It works similar to Object.freeze() but the only difference is that it is possible to change the value of an existing property 
+
+  ```js
+  Object.seal(kpopIdol);
+  // Object.isSealed() checks if an object has been sealed 
+  console.log(Object.isSealed(kpopIdol));
+  // returns true as a result
+  ```
+
+- **"this" keyword**
+```js
+```
+- **Merging objects**
+This method was introduced from ES6 and the Spread Syntax method combines the source objects in one new object.
+```js
+let members = {vicalist: "Rose, Jennie", dancer: "Lisa", visual: "Jisoo"}
+let songs = {1: "How You Like That", 2: "Pretty Savage", 3: "Love Sick Girls"}
+let blackPink = {...members, ...songs}
+
+console.log(blackPink)
+// result
+// {
+//  '1': 'How You Like That',
+//  '2': 'Pretty Savage',
+//  '3': 'Love sick Girls',
+//  vicalist: 'Rose, Jennie',
+//  dancer: 'Lisa',
+//  visual: 'Jisoo'
+//  }
+```
+- **Object.assign()**
+```js
+```
 
 References:
 https://www.codehousegroup.com/insight-and-inspiration/tech-stream/using-object-manipulation-in-javascript

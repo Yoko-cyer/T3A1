@@ -13,21 +13,56 @@ References:
 ## Question 2
 ### What are the most important aspects of quality software?
 
-*List discuss and demonstrate 6 software quality characteristics.*
-
 There are six important qualities when softwares is built. They are reliability, functionality, usability, maintainability, portability and efficiency. I will outline them in detail below. These qualities are defined in ISO/IEC 9126-1:2001. It is an international standard for software quality set by ISO. ISO/IEC 9126-1:2001 is now replaced by ISO/IEC 25010:2011 and withdrawn. 
 Developers must know which qualities are more important when creating softwares because some qualities are more important than the other depending on what softwares. In order to avoid spending too much time on the less important qualities and streamline your work, it is important to discern which qualities are prioritised over the others. 
 
+- **Reliability** - This refers to the degree to which the function continues to operate normally, and to which failure is unlikely to occur. Secondary characteristics include maturity, disability tolerance, and resilience. The following items can be listed as indicators for measuring the reliability of software. 
+  - Mean Time Between Failure(MTBF) - It is the average time from one failure to the next. In other words, it's a number that tells you how long a software can run normally, so the higher this number, the more reliable the software.
+  - Mean Time To Repair(MTTR) - The average time from a software failure to the completion of repair. Therefore, the smaller this number is, the faster the software can recover from the failure.
+  - Uptime calculation - the formula is uptime = MTBF/(MTBF + MTTR). It is the ratio that the software was actually running, calculated from the above two numbers.
+- **Functionality** - This refers to the degree of implementation of necessary functions required by purpose. Secondary characteristics include purposefulness, accuracy, interoperability, standard relevance, and security. 
+- **Usability** - This refers to the degree of easy to understand and use of the software. Sub-characteristics include comprehension, learning, and operability.
+- **Maintainability** -  This refers to the degree of effort required for maintenance and revision work of the softwares. Secondary characteristics include analyzability, changeability, stability, and testability.
+- **Portability** - This refers to the ease of porting, degree of operation as it is when moving to another environment. Secondary characteristics include environmental applicability, installability, standard conformance, and replaceability.
+- **Efficiency** - This refers to the degree of time and resources used to achieve goals. Secondary characteristics include time efficiency and resource efficiency.
 
 References:
+https://www.silasreinagel.com/blog/2016/11/15/the-seven-aspects-of-software-quality/
+https://www.iso.org/standard/22749.html
+https://www.opservices.com/mttr-and-mtbf/
 
 ---
 ## Question 3
 ### Outline a standard high level structure for a MERN stack application and explain the components
 
-*Shows almost flawless understanding of the high level structure of the app*
+MERN is an acronym of MongoDB, Express, React and Node.js. MERN stack is used for efficiently developing full-stack web applications by using JavaScript. The MERN architecture makes it easy to build a three-tier architecture with full Javascript and JSON, including the front-end display layer (React), application layer (Express and Node), and database layer (MongoDB).
+
+- **MongoDB** - this is a Document-oriented No-SQL database used to create, read, update and delete data.
+- **Express** - this is Node.js framework. For example, it's a hassle to process individual requests from users with different URL paths from scratch in Node.js, but Express makes it easy.
+- **React** - this is a Javascript library to build a UI component that creates the UI for a single-page web app. It is responsible for only V of the MVC model, and quick rendering can be expected by implementing a virtual DOM.
+- **Node.js** - this is a Javascript runtime built on Chrome's V8 Javascript engine. 
+
+The picture below illustrates how MERN stack works. React is responsible for the View, which means the part that the user can see. Express provides a method that specifies which function is called and which template engine is used for a particular HTTP request (GET, POST, DELETE, etc.. ) and that URL pattern does.
+
+For example, if I want to send some data and click the send button:
+
+Click the submit button
+
+→ React executes function related to transmission
+
+→ Express executes the process for that function. Send the process I want MongoDB to execute
+
+→ MongoDB executes the process that came from Express
+
+→ Complete
+
+![mern stack](./img/mern-stack.png)
 
 References:
+
+https://www.geeksforgeeks.org/mern-stack/
+https://qiita.com/Kage_/items/ffb0c213bfc36eae3592
+
 
 ---
 ## Question 4
